@@ -8,7 +8,7 @@ Python Selenium script that logs into a demo gym booking site, advances the sche
 - Uses two roles:
   - **Admin account** to log in and click the “advance 3 days” button so that the target classes appear.
   - **User account** to log in and actually book / waitlist the classes.
-- Implements a `retry(func, retries=7, description=None)` helper that:
+- Implements a `retry(func, retries=10, description=None)` helper that:
   - wraps Selenium actions that can fail under simulated network issues
   - retries on `TimeoutException` up to a fixed number of attempts
   - prints which attempt is currently running for easier debugging.
